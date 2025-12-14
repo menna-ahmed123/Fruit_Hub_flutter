@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class OnBording extends StatelessWidget {
-  const OnBording({super.key});
+class AuthScreen extends StatelessWidget {
+  const AuthScreen({super.key});
 
-  static const routeName = "on_bording";
+    static const routeName = "auth";
+
 
   @override
   Widget build(BuildContext context) {

@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_hub_app/constants.dart';
+import 'package:fruit_hub_app/core/services/shared_prefrence_singletone.dart';
 import 'package:fruit_hub_app/core/utils/app_images.dart';
-import 'package:fruit_hub_app/feature/on_bording/presentation/views/splash_screen.dart';
+import 'package:fruit_hub_app/feature/auth/presentation/views/auth_screen.dart';
+import 'package:fruit_hub_app/feature/on_bording/presentation/views/on_bording_screen.dart';
 
 class SplashScreenBody extends StatefulWidget {
   const SplashScreenBody({super.key});
@@ -33,8 +36,13 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
   }
 
   void excuteNavigation() {
-    Future.delayed(Duration(seconds: 3), () {
-      Navigator.pushReplacementNamed(context, OnBording.routeName);
+    Future.delayed(Duration(seconds: 5), () {
+      bool isOnBordingCompleted = Prefs.getBool(kIsOnBordingCompletedKey) ?? false;
+      if (isOnBordingCompleted) {
+        Navigator.pushReplacementNamed(context, AuthScreen.routeName);
+      } else {
+        Navigator.pushReplacementNamed(context, OnBording.routeName);
+      }
     });
   }
 }
