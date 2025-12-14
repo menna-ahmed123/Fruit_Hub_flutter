@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_hub_app/core/helper/on_generate_routes.dart';
 import 'package:fruit_hub_app/core/services/shared_prefrence_singletone.dart';
+import 'package:fruit_hub_app/core/utils/app_colors.dart';
 import 'package:fruit_hub_app/feature/splash/presentation/views/splash_screen.dart';
 
 void main() async {
@@ -17,7 +18,7 @@ class FruitHub extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
     theme: ThemeData(
-      fontFamily: "Cairo"
+     
     ),
   debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoute,

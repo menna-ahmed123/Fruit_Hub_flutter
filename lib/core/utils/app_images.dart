@@ -14,20 +14,33 @@ class Assets {
   /// assets/images/background2.svg
   static const String imagesBackground2 = "assets/images/background2.svg";
 
-    static const String imagesFruit = "assets/images/fruit_basket.svg";
-
-        static const String imagesPineapple = "assets/images/pineapple.svg";
-
-
+  /// Assets for imagesFruitBasket
+  /// assets/images/fruit_basket.svg
+  static const String imagesFruitBasket = "assets/images/fruit_basket.svg";
 
   /// Assets for imagesLogo
   /// assets/images/logo.svg
   static const String imagesLogo = "assets/images/logo.svg";
 
- 
+  /// Assets for imagesPineapple
+  /// assets/images/pineapple.svg
+  static const String imagesPineapple = "assets/images/pineapple.svg";
+
   /// Assets for imagesPlant
   /// assets/images/plant.svg
   static const String imagesPlant = "assets/images/plant.svg";
+
+  /// Assets for imagesSocialIconsa
+  /// assets/images/social_iconsa.svg
+  static const String imagesSocialIconsa = "assets/images/social_iconsa.svg";
+
+  /// Assets for imagesSocialIconsf
+  /// assets/images/social_iconsf.svg
+  static const String imagesSocialIconsf = "assets/images/social_iconsf.svg";
+
+  /// Assets for imagesSocialIconsg
+  /// assets/images/social_iconsg.svg
+  static const String imagesSocialIconsg = "assets/images/social_iconsg.svg";
 
   /// Assets for imagesSplashBottom
   /// assets/images/splash_bottom.svg

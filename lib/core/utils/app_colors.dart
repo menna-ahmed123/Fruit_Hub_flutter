@@ -5,5 +5,8 @@ abstract class AppColors {
 
     static const Color secondaryColor = Color(0xfff4A91F);
 
+    static const Color greenColor = Color(0xff2D9F5D);
+
+
 
 }

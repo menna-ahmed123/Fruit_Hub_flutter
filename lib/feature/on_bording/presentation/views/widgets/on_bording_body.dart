@@ -4,7 +4,7 @@ import 'package:fruit_hub_app/constants.dart';
 import 'package:fruit_hub_app/core/services/shared_prefrence_singletone.dart';
 import 'package:fruit_hub_app/core/utils/app_colors.dart';
 import 'package:fruit_hub_app/core/widgets/custom_button.dart';
-import 'package:fruit_hub_app/feature/auth/presentation/views/auth_screen.dart';
+import 'package:fruit_hub_app/feature/auth/presentation/views/login_screen.dart';
 import 'package:fruit_hub_app/feature/on_bording/presentation/views/widgets/on_bording_page_view.dart';
 
 class OnBordingBody extends StatefulWidget {

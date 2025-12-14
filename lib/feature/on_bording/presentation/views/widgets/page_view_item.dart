@@ -37,7 +37,7 @@ class PageViewItem extends StatelessWidget {
                 bottom: 0,
                 left: 0,
                 right: 0,
-                child: SvgPicture.asset(Assets.imagesFruit),
+                child: SvgPicture.asset(Assets.imagesFruitBasket),
               ),
             ],
           ),

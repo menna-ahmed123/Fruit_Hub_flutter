@@ -16,7 +16,7 @@ class OnBordingPageView extends StatelessWidget {
       children: [
         PageViewItem(
           backgroundImage: Assets.imagesBackGround1,
-          image: Assets.imagesFruit,
+          image: Assets.imagesFruitBasket,
 
           subTitle:
               "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
