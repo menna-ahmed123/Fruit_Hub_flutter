@@ -65,7 +65,7 @@ class _OnBordingBodyState extends State<OnBordingBody> {
                   Prefs.setBool(kIsOnBordingCompletedKey, true);
                 Navigator.of(
                   context,
-                ).pushReplacementNamed(AuthScreen.routeName);
+                ).pushReplacementNamed(LoginScreen.routeName);
               },
               text: "Start Now",
             ),

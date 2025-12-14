@@ -28,7 +28,7 @@ class LoginScreenBody extends StatelessWidget {
             
             SizedBox(height:16),
 
-            CustomTextFormField(hintText: "pawwsord", textInputType: TextInputType.visiblePassword,
+            CustomTextFormField(hintText: "password", textInputType: TextInputType.visiblePassword,
             icon: IconButton(onPressed: (){}, icon: Icon(Icons.remove_red_eye,color: Color(0xffC9CECF),)),
             ),
                         SizedBox(height: 16),

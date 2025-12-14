@@ -39,7 +39,7 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
     Future.delayed(Duration(seconds: 5), () {
       bool isOnBordingCompleted = Prefs.getBool(kIsOnBordingCompletedKey) ?? false;
       if (isOnBordingCompleted) {
-        Navigator.pushReplacementNamed(context, AuthScreen.routeName);
+        Navigator.pushReplacementNamed(context, LoginScreen.routeName);
       } else {
         Navigator.pushReplacementNamed(context, OnBording.routeName);
       }

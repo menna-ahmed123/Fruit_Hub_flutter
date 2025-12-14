@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fruit_hub_app/core/widgets/custom_app_par.dart';
 import 'package:fruit_hub_app/feature/auth/presentation/views/widgets/login_screen_body.dart';
 
-class AuthScreen extends StatelessWidget {
-  const AuthScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
-    static const routeName = "auth";
+    static const routeName = "login";
 
 
   @override
