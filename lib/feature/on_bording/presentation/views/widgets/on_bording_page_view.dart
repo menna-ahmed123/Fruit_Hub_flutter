@@ -1,0 +1,45 @@
+import 'package:flutter/material.dart';
+import 'package:fruit_test_myself/core/utils/app_colors.dart';
+import 'package:fruit_test_myself/core/utils/app_images.dart';
+import 'package:fruit_test_myself/core/utils/app_text_styles.dart';
+import 'package:fruit_test_myself/feature/on_bording/presentation/views/widgets/page_view_item.dart';
+
+class OnBordingPageView extends StatelessWidget {
+  const OnBordingPageView({super.key, required this.pageController});
+   final PageController pageController;
+
+@override
+Widget build(BuildContext context) {
+  return PageView(
+          controller: pageController,
+
+    children: [
+      PageViewItem(
+        image: Assets.imagesFruitBasket,
+        backGroundImage: Assets.imagesBackGround1,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("welcome to", style: TextStyles.bold23),
+            Text("Fruit", style: TextStyles.bold23),
+            Text("HUB", style: TextStyles.bold23.copyWith(color: AppColors.secondaryColor)),
+          ],
+        ),
+         subTitle:
+              "Discover a unique shopping experience with FruitHUB. Explore our wide selection of premium fresh fruits and get the best deals and highest quality.",
+      ),
+       PageViewItem(
+         
+          image: Assets.imagesPineapple,
+
+          subTitle:
+              "We offer you the finest, carefully selected fruits. Check out the details, photos, and reviews to ensure you choose the perfect fruit.",
+          title: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [Text("Search and shop", style: TextStyles.bold23)],
+          ), backGroundImage:Assets.imagesBackground2 ,
+        ),
+    ],
+  );
+}
+}
