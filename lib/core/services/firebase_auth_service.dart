@@ -114,4 +114,7 @@ class FirebaseAuthService {
       throw CustomException('Error while signing in with Google');
     }
   }
+  bool isLoggedIn() {
+    return FirebaseAuth.instance.currentUser != null;
+  }
 }

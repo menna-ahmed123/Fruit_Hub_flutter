@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:fruit_test_myself/core/helper/get_user.dart';
 import 'package:fruit_test_myself/core/utils/app_images.dart';
 import 'package:fruit_test_myself/core/utils/app_text_styles.dart';
 
@@ -25,7 +26,7 @@ class CustomHomeAppPar extends StatelessWidget {
         
       ),
       subtitle: Text(
-        'John Doe',
+       getUser().name,
         style: TextStyles.bold16,
       ),
     );

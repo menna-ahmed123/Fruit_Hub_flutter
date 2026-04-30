@@ -12,4 +12,5 @@ abstract class AuthRepo{
   Future<Either<Failure, UserEntity>> signInWithGoogle();
 
   Future addUserData(UserEntity user);
+  Future saveUserData({ required UserEntity user});
 }

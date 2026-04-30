@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:fruit_test_myself/constants.dart';
+import 'package:fruit_test_myself/core/services/firebase_auth_service.dart';
 import 'package:fruit_test_myself/core/services/shared_prefrence_singletone.dart';
 import 'package:fruit_test_myself/core/utils/app_images.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/views/sign_in_screen.dart';
+import 'package:fruit_test_myself/feature/home/presentation/views/home_screen.dart';
 import 'package:fruit_test_myself/feature/on_bording/presentation/views/on_bording_Screen.dart';
 
 class SplashScreenBody extends StatefulWidget {
@@ -49,7 +51,12 @@ class _SplashScreenBodyState extends State<SplashScreenBody> {
       bool isOnBordingCompleted =
           Prefs.getBool(kIsOnBordingCompletedKey) ?? false;
       if (isOnBordingCompleted) {
-        Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+        var isloggedIn = FirebaseAuthService().isLoggedIn();
+        if (isloggedIn) {
+          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+        } else {
+          Navigator.pushReplacementNamed(context, SignInScreen.routeName);
+        }
       } else {
         Navigator.pushReplacementNamed(context, OnBordingScreen.routeName);
       }

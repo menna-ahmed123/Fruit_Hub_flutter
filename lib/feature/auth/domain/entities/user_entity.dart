@@ -9,11 +9,5 @@ class UserEntity {
     required this.email,
   });
 
-  Map<String, String> toMap() {
-    return {
-      'id': id,
-      'name': name,
-      'email': email,
-    };
-  }
+  
 }

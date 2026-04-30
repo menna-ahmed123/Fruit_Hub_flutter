@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fruit_test_myself/core/widgets/build_app_par.dart';
 
 class BestSellingScreen extends StatelessWidget {
   const BestSellingScreen({super.key});
@@ -7,13 +8,8 @@ class BestSellingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Best Selling Fruits'),
-      ),
-      body: Center(
-        child: Text('Best Selling Fruits Content'),
-      ),
+      appBar: buildAppPar(title: 'Best Selling Fruits'),
+      body: Center(child: Text('Best Selling Fruits Content')),
     );
   }
-
 }

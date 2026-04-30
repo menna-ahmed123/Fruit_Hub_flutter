@@ -1,11 +1,14 @@
+import 'dart:convert';
 import 'dart:developer' as developer;
 
 import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fruit_test_myself/constants.dart';
 import 'package:fruit_test_myself/core/errors/exceptions.dart';
 import 'package:fruit_test_myself/core/errors/failure.dart';
 import 'package:fruit_test_myself/core/services/fire_store_service.dart';
 import 'package:fruit_test_myself/core/services/firebase_auth_service.dart';
+import 'package:fruit_test_myself/core/services/shared_prefrence_singletone.dart';
 import 'package:fruit_test_myself/core/utils/end_pints.dart';
 import 'package:fruit_test_myself/feature/auth/data/models/user_model.dart';
 import 'package:fruit_test_myself/feature/auth/domain/entities/user_entity.dart';
@@ -67,6 +70,7 @@ class AuthRepoImpl extends AuthRepo {
         password,
       );
       var userEntity = await getUserData(userId: user.uid);
+      await saveUserData(user: userEntity);
 
       return right(userEntity);
     } catch (e) {
@@ -117,7 +121,7 @@ class AuthRepoImpl extends AuthRepo {
 
   @override
   Future<dynamic> addUserData(UserEntity user) async {
-    await fireStoreService.addData(EndPints.addUserData, user.toMap(),
+    await fireStoreService.addData(EndPints.addUserData,UserModel.fromEntity(user).toMap(),
     documentId: user.id
     );
   }
@@ -126,5 +130,13 @@ class AuthRepoImpl extends AuthRepo {
   Future<UserEntity> getUserData({required String userId}) async {
     var userData = await fireStoreService.getData(path: EndPints.getUserData, documentId: userId);
     return UserModel.fromJson(userData);
+  }
+  
+  @override
+  Future<dynamic> saveUserData({required UserEntity user}) async {
+      
+     var jsonData = jsonEncode(UserModel.fromEntity(user).toMap());
+     await Prefs.setString(kUserDataKey, jsonData);
+
   }
 }
