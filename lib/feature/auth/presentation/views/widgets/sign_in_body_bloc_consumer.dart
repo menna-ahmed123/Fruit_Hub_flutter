@@ -4,6 +4,7 @@ import 'package:fruit_test_myself/core/helper/build_error_message.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/cubits/sign_in_cubit/sign_in_cubit.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/cubits/sign_in_cubit/sign_in_state.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/views/widgets/sign_in_screen_body.dart';
+import 'package:fruit_test_myself/feature/home/presentation/views/home_screen.dart';
 
 class SignInBodyBlocConsumer extends StatelessWidget {
   const SignInBodyBlocConsumer({super.key});
@@ -15,7 +16,7 @@ class SignInBodyBlocConsumer extends StatelessWidget {
         if (state is SignInFailureState) {
           buildErrorMessage(context, state.message);
         } else if (state is SignInSuccessState) {
-          // Navigate to the next screen or show success message.
+          Navigator.pushNamed(context, HomeScreen.routeName);
         }
       },
       builder: (context, state) {

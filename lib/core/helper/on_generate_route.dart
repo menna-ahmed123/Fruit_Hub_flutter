@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/views/sign_in_screen.dart';
 import 'package:fruit_test_myself/feature/auth/presentation/views/sign_up_screen.dart';
+import 'package:fruit_test_myself/feature/best_selling_fruits/presentation/views/best_selling_screen.dart';
+import 'package:fruit_test_myself/feature/home/presentation/views/home_screen.dart';
 import 'package:fruit_test_myself/feature/on_bording/presentation/views/on_bording_Screen.dart';
 import 'package:fruit_test_myself/feature/splash/presentation/views/splash_screen.dart';
 
@@ -16,7 +18,11 @@ Route<dynamic> onGenerateRoute(RouteSettings settings) {
       case SignInScreen.routeName:
       return MaterialPageRoute(builder: (_) => const SignInScreen());
     case SignUpScreen.routeName:
-      return MaterialPageRoute(builder: (_) => const SignUpScreen());  
+      return MaterialPageRoute(builder: (_) => const SignUpScreen());
+      case HomeScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const HomeScreen());
+      case BestSellingScreen.routeName:
+      return MaterialPageRoute(builder: (_) => const BestSellingScreen());
 
     default:
       return MaterialPageRoute(

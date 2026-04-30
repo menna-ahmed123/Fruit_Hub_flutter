@@ -1,4 +1,3 @@
-import 'package:fruit_test_myself/feature/auth/domain/entities/user_entity.dart';
 
 abstract class DataService{
 

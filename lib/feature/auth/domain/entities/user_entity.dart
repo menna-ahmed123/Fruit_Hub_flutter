@@ -9,7 +9,7 @@ class UserEntity {
     required this.email,
   });
 
-  toMap() {
+  Map<String, String> toMap() {
     return {
       'id': id,
       'name': name,

@@ -16,7 +16,7 @@ class SignUpBodyBlocConsumer extends StatelessWidget {
           // Show error message
           buildErrorMessage(context, state.message.toString());
         } else if (state is SignUpSuccessState) {
-          // Navigate to the next screen or show success message
+          Navigator.pop(context);
         }
       },
       builder: (context, state) {
@@ -34,6 +34,4 @@ class SignUpBodyBlocConsumer extends StatelessWidget {
       },
     );
   }
-
-
 }
